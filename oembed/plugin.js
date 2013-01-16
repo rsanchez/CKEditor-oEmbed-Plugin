@@ -38,7 +38,7 @@
                     },
                     onOk: function () {
                         $('#oembedInfoFooter').hide();
-                        var inputCode = this.getValueOf('general', 'embedCode');
+                        var inputCode = this.getValueOf('general', 'embedCode').replace('https:', 'http:');
                         if (inputCode.length < 1 || inputCode.indexOf('http') < 0) {
                             alert(lang.noEmbedCode);
                             return false;
